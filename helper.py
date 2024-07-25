@@ -43,7 +43,7 @@ def fetch_medal_tally(df,year,country):
 
 def data_over_time(df,col):
     temp_data_over_time = df.drop_duplicates(['Year',col])['Year'].value_counts().reset_index().sort_values('Year')
-    temp_data_over_time.rename(columns={'index':'Edition','Year':col},inplace=True)
+    temp_data_over_time.rename(columns={'count':'Edition','Year':col},inplace=True)
     return temp_data_over_time   
 
 
