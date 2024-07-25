@@ -151,18 +151,3 @@ if user_menu == 'Athlete-wise Analysis':
     fig.update_layout(autosize=False,width=1000,height=600)
     st.plotly_chart(fig)
 
-
-''' 
-    x = []
-    name = []
-    all_sports = athlete_df['Sport'].unique().tolist()
-    for sport in all_sports:
-        temp_df = athlete_df[athlete_df['Sport'] == sport]
-        x.append(temp_df[temp_df['Medal'] == 'Gold']['Age'].dropna())
-        name.append(sport)
-
-    fig = ff.create_distplot(x,name,show_hist=False,show_rug=False)
-    fig.update_layout(autosize=False,width=1000,height=600)
-    st.title("Distribution of Age WRT Sports(Gold Medalist)")
-    st.plotly_chart(fig)
-'''
